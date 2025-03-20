@@ -1,3 +1,4 @@
 FROM bitnami/kubectl
-COPY inject-latency.sh /scripts
-WORKDIR /scripts
+RUN mkdir -p /etc/config
+COPY inject-latency.sh /etc/config/
+WORKDIR /etc/config
